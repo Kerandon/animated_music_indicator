@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # Creates animated bars to indicate when music is playing.
-
-Simply place the **AnimatedMusicIndicator** where you want it to be displayed in your app:
 
 ![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/house_example.gif)
 
@@ -11,9 +8,9 @@ You can customize the music bars, including selecting one of three styles: **sol
 
 
 <p float="center">
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/solid.gif" width="150" />
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/circles.gif" width="150" /> 
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/dashes.gif" width="150" />
+  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/solid.gif" width="50" />
+  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/circles.gif" width="50" /> 
+  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/dashes.gif" width="50" />
 </p>
 
 ###### Animation
@@ -22,13 +19,12 @@ You can customize the music bars, including selecting one of three styles: **sol
   <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif" width="150" />
 </p>
 
-The bars will animate automatically by default. However, you can control when the
-animation runs by passing in a boolean value to **animate**.
+The bars will animate automatically by default. However, you can control the
+animation by passing a boolean to **animate**.
 
 ###### Size
 
-Size can be changed by passing in a double value to **size**. Size is based off the width of the device
-and the default is 10% (0.1).
+The size can be changed by passing a double to **size**. Size is based off the width of the device and the default is 10% (0.1).
 
 ## Usage
 
@@ -88,7 +84,3 @@ The import statement:
 import 'package:animated_music_indicator/animated_music_indicator.dart';
 
 ```
-=======
-# animated_music_indicator
-Flutter package to display an animated music indicator when music is playing
->>>>>>> eff34ff48935cda70e0944f37692772cca78b198
