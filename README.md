@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Creates animated bars to indicate when music is playing.
 
 Simply place the **AnimatedMusicIndicator** where you want it to be displayed in your app:
@@ -87,3 +88,7 @@ The import statement:
 import 'package:animated_music_indicator/animated_music_indicator.dart';
 
 ```
+=======
+# animated_music_indicator
+Flutter package to display an animated music indicator when music is playing
+>>>>>>> eff34ff48935cda70e0944f37692772cca78b198
