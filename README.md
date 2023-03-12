@@ -1,10 +1,10 @@
-# Creates animated bars to indicate when music is playing.
+# Display animated bars to indicate music is playing.
 
 ![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/house_example.gif)
 
-# Features
+## Features
 
-You can customize the music bars, including selecting one of three styles: **solid**, **circle** & **dash**.
+You can customize the display, including selecting one of three styles: **solid**, **circle** & **dash**.
 
 
 <p float="center">
@@ -13,7 +13,7 @@ You can customize the music bars, including selecting one of three styles: **sol
   <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/dashes.gif" width="50" />
 </p>
 
-###### Animation
+## Animation
 
 <p float="center">
   <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif" width="150" />
@@ -21,10 +21,6 @@ You can customize the music bars, including selecting one of three styles: **sol
 
 The bars will animate automatically by default. However, you can control the
 animation by passing a boolean to **animate**.
-
-###### Size
-
-The size can be changed by passing a double to **size**. Size is based off the width of the device and the default is 10% (0.1).
 
 ## Usage
 
