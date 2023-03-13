@@ -68,7 +68,7 @@ In your pubspec.yaml:
 ```
 
 dependencies:
-  animated_music_indicator: ^1.0.0
+  animated_music_indicator: ^0.0.1
   
 ```
 
