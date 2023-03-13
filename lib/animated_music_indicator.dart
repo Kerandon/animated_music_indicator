@@ -100,7 +100,8 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
 
     for (int i = 0; i < widget.numberOfBars; i++) {
       if (widget.animate) {
-        _controllers[i].forward(from: RandomClass.calculateDoubleInRange(0, 0.50));
+        _controllers[i]
+            .forward(from: RandomClass.calculateDoubleInRange(0, 0.50));
       }
       _controllers[i].addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -161,30 +162,32 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
                 borderRadius: BorderRadius.circular(
                     widget.curveBackgroundCorners ? cornerRadius : 0),
               ),
-              child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                if (widget.animate)
-                  ...List.generate(
-                    widget.numberOfBars,
-                    (index) => AnimatedBuilder(
-                      animation: _controllers[index],
-                      builder: (context, child) => SizedBox(
-                        width: maxWidth / widget.numberOfBars,
-                        height: maxWidth * 2,
-                        child: CustomPaint(
-                          painter: BarPainter(
-                              color: widget.colors == null
-                                  ? widget.color ?? Colors.white
-                                  : widget.colors![index],
-                              progress: _animators[index].value,
-                              width: maxWidth,
-                              roundBars: widget.roundBars,
-                              barStyle: widget.barStyle),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (widget.animate)
+                    ...List.generate(
+                      widget.numberOfBars,
+                      (index) => AnimatedBuilder(
+                        animation: _controllers[index],
+                        builder: (context, child) => SizedBox(
+                          width: maxWidth / widget.numberOfBars,
+                          height: maxWidth * 2,
+                          child: CustomPaint(
+                            painter: BarPainter(
+                                color: widget.colors == null
+                                    ? widget.color ?? Colors.white
+                                    : widget.colors![index],
+                                progress: _animators[index].value,
+                                width: maxWidth,
+                                roundBars: widget.roundBars,
+                                barStyle: widget.barStyle),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-              ]),
+                ],
+              ),
             ),
           );
         },
@@ -223,8 +226,7 @@ List<Animation<double>> generateAnimations(
 
     animations.add(TweenSequence([
       TweenSequenceItem(
-          tween: Tween<double>(begin: 0, end: heightMin),
-          weight: 0.10),
+          tween: Tween<double>(begin: 0, end: heightMin), weight: 0.10),
       TweenSequenceItem(
           tween: Tween<double>(begin: heightMin, end: heightMax),
           weight: RandomClass.calculateDoubleInRange(0.20, 1.5)),
@@ -235,8 +237,7 @@ List<Animation<double>> generateAnimations(
           tween: Tween<double>(begin: heightMax, end: heightMin),
           weight: RandomClass.calculateDoubleInRange(0.10, 0.50)),
       TweenSequenceItem(
-          tween: Tween<double>(begin: heightMin, end: 0),
-          weight: 0.10),
+          tween: Tween<double>(begin: heightMin, end: 0), weight: 0.10),
     ]).animate(
         CurvedAnimation(parent: controllers[i], curve: Curves.bounceOut)));
   }
