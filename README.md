@@ -4,7 +4,7 @@
 
 ## Features
 
-You can customize the display, including selecting one of three styles: **solid**, **circle** & **dash**.
+You can customize by selecting one of three styles: **solid**, **circle** & **dash**.
 
 
 <p float="center">
@@ -19,8 +19,7 @@ You can customize the display, including selecting one of three styles: **solid*
   <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif" width="150" />
 </p>
 
-The bars will animate automatically by default. However, you can control the
-animation by passing a boolean to **animate**.
+You can control the animation by passing a boolean to **animate**.
 
 ## Usage
 
@@ -34,10 +33,6 @@ AnimatedMusicIndicator();
 ```
 
 **Customized example:**
-
-<p float="center">
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif" width="250" />
-</p>
 
 ```
 
@@ -62,6 +57,10 @@ AnimatedMusicIndicator();
               
 ```
 
+<p float="center">
+  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif" width="250" />
+</p>
+
 # Installing:
 
 In your pubspec.yaml:
@@ -69,7 +68,7 @@ In your pubspec.yaml:
 ```
 
 dependencies:
-  animated_music_indicator: ^0.0.1
+  animated_music_indicator: ^1.0.0
   
 ```
 
