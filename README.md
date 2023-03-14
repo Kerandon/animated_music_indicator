@@ -4,20 +4,14 @@
 
 ## Features
 
-You can customize by selecting one of three styles: **solid**, **circle** & **dash**.
+You can customize by selecting one of three styles: **1. solid**, **2. circle** & **3. dash**.
 
-
-<p float="center">
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/solid.gif" width="50" />
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/circles.gif" width="50" /> 
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/dashes.gif" width="50" />
-</p>
+![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/Three_styles_gif.gif)
 
 ## Animation
 
-<p float="center">
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif" width="150" />
-</p>
+
+![Alt Text](img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif)
 
 You can control the animation by passing a boolean to **animate**.
 
@@ -57,7 +51,4 @@ AnimatedMusicIndicator();
               
 ```
 
-<p float="center">
-  <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif" width="250" />
-</p>
-
+![Alt Text](img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif)
