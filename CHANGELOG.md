@@ -1,3 +1,6 @@
+[## 0.0.4] [14 March 2023]
+* Run Dart formatter
+
 [## 0.0.3] [14 March 2023]
 * Fixed gifs
 
