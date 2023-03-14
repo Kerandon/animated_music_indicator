@@ -3,14 +3,17 @@ import 'package:animated_music_indicator/utils/random_class.dart';
 import 'package:flutter/material.dart';
 
 // Creates customizable animating music bars to indicate music is being played.
-// [AnimatedMusicIndicator] by default will animate five [Colors.white] bars and
-// three [BarStyle] can be selected:
+
+// [AnimatedMusicIndicator] can be set to one of three [BarStyle]s:
 
 enum BarStyle {
   solid,
   dash,
   circle,
 }
+
+/// If no arguments are supplied [AnimatedMusicIndicator] will animate by default
+/// 5 bars in [Colors.white].
 
 class AnimatedMusicIndicator extends StatefulWidget {
   const AnimatedMusicIndicator({

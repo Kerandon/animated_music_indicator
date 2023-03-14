@@ -23,6 +23,7 @@ class BarPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final width = size.width;
     final height = size.height;
+
     final paint = Paint()
       ..color = color
       ..strokeWidth = width * 0.70
@@ -33,10 +34,14 @@ class BarPainter extends CustomPainter {
 
     final path = Path();
 
+    /// SOLID
+
     if (barStyle == BarStyle.solid) {
       path
         ..moveTo(width / 2, height)
         ..lineTo(width / 2, 0);
+
+      ///Uses [PathMetrics] to animate based on the percent value (from 0 to 1) passed in.
 
       ui.PathMetrics pathMetrics = path.computeMetrics();
 
@@ -45,6 +50,9 @@ class BarPainter extends CustomPainter {
           pathMetric.extractPath(0.0, pathMetric.length * progress);
 
       canvas.drawPath(extracted, paint);
+
+      /// DASH
+
     } else if (barStyle == BarStyle.dash) {
       const maxNumberOfSegments = 8;
       final currentNumberOfSegments = maxNumberOfSegments * progress;
@@ -62,6 +70,10 @@ class BarPainter extends CustomPainter {
       }
 
       canvas.drawPath(path, paint);
+
+      /// CIRCLE
+
+
     } else if (barStyle == BarStyle.circle) {
       const maxNumberOfSegments = 6;
       final currentNumberOfSegments = maxNumberOfSegments * progress;

@@ -1,3 +1,7 @@
-## 0.0.1
+[## 0.0.2] [14 March 2023]
+* Updated ReadMe - formatting
+* Added additional code comments
 
-* TODO: Describe initial release.
+
+[## 0.0.1] [14 March 2023]
+* Animated music indicator to show when music is playing.

@@ -1,5 +1,8 @@
 import 'dart:math';
 
+/// A simple utility class to create a random double or int between a given range.
+/// The random values are used to create randomness in the bar animation.
+
 class RandomClass {
   static Random random = Random();
 

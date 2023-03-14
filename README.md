@@ -1,4 +1,4 @@
-# Display animated bars to indicate music is playing.
+# Display an animated equalizer to indicate music is playing.
 
 ![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/house_example.gif)
 
@@ -61,21 +61,3 @@ AnimatedMusicIndicator();
   <img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif" width="250" />
 </p>
 
-# Installing:
-
-In your pubspec.yaml:
-
-```
-
-dependencies:
-  animated_music_indicator: ^0.0.1
-  
-```
-
-The import statement:
-
-```
-
-import 'package:animated_music_indicator/animated_music_indicator.dart';
-
-```

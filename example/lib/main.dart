@@ -33,6 +33,9 @@ class _AnimatedMusicIndicatorExampleState
 
   @override
   Widget build(BuildContext context) {
+
+    /// Example creates 5 [ListTile] with [AnimatedMusicIndicator] set as trailing.
+
     return Scaffold(
       body: ListView.builder(
           itemCount: 5,
