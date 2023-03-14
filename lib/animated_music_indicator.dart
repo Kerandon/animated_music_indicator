@@ -2,9 +2,9 @@ import 'package:animated_music_indicator/bar_painter.dart';
 import 'package:animated_music_indicator/utils/random_class.dart';
 import 'package:flutter/material.dart';
 
-// Creates customizable animating music bars to indicate music is being played.
+/// Creates customizable animating music bars to indicate music is being played.
 
-// [AnimatedMusicIndicator] can be set to one of three [BarStyle]s:
+/// [AnimatedMusicIndicator] can be set to one of three [BarStyle]s:
 
 enum BarStyle {
   solid,
@@ -19,28 +19,28 @@ class AnimatedMusicIndicator extends StatefulWidget {
   const AnimatedMusicIndicator({
     Key? key,
 
-    // Either a single color OR multiple colors can be set.
-    // Default color is [Colors.white].
+    /// Either a single color OR multiple colors can be set.
+    /// Default color is [Colors.white].
 
     this.color,
     this.colors,
     this.numberOfBars = 5,
 
-    // There are 3 styles to select from [BarStyle.solid], [BarStyle.dash] and [BarStyle.circle].
+    /// There are 3 styles to select from [BarStyle.solid], [BarStyle.dash] and [BarStyle.circle].
 
     this.barStyle = BarStyle.solid,
     this.backgroundColor = Colors.transparent,
     this.curveBackgroundCorners = true,
 
-    // Round the bar ends.
+    /// Round the bar ends.
 
     this.roundBars = true,
 
-    // Allows control of when the bars animate. If animation is stopped, no bars will show.
+    /// Allows control of when the bars animate. If animation is stopped, no bars will show.
 
     this.animate = true,
 
-    // Size is based as a proportion of the device's screen width.
+    /// Size is based as a proportion of the device's screen width.
 
     this.size = 0.10,
   })  : assert(
@@ -73,15 +73,15 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
   late final List<AnimationController> _controllers = [];
   final List<Animation<double>> _animators = [];
 
-  // A random duration will be selected in milliseconds based on the min and max time,
-  // to set how long a bar will complete its animation up and down.
+  /// A random duration will be selected in milliseconds based on the min and max time,
+  /// to set how long a bar will complete its animation up and down.
 
   final int minBarTime = 1500;
   final int maxBarTime = 3500;
 
   @override
   void initState() {
-    // Initializes the [AnimationController] objects, each representing a single bar.
+    /// Initializes the [AnimationController] objects, each representing a single bar.
 
     _controllers.addAll(generateControllers(
       tickerProvider: this,
@@ -94,12 +94,12 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
       numberOfBars: widget.numberOfBars,
     ));
 
-    // Initializes the [Animation] objects each representing a single bar.
-    // After each animation has completed, [Animation] will be
-    // removed from [_animators] list, and a new [Animation] object generated
-    // and inserted into the list, in order to create dynamic height values.
-    //
-    //Animation will be triggered in [initState] override method by default.
+    /// Initializes the [Animation] objects each representing a single bar.
+    /// After each animation has completed, [Animation] will be
+    /// removed from [_animators] list, and a new [Animation] object generated
+    /// and inserted into the list, in order to create dynamic height values.
+    ///
+    /// Animation will be triggered in [initState] override method by default.
 
     for (int i = 0; i < widget.numberOfBars; i++) {
       if (widget.animate) {
@@ -124,7 +124,7 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
     super.initState();
   }
 
-// [didUpdateWidget] override method used to control the animation if a 'true' or 'false' value is passed in after init.
+  /// [didUpdateWidget] override method used to control the animation if a 'true' or 'false' value is passed in after init.
 
   @override
   void didUpdateWidget(covariant AnimatedMusicIndicator oldWidget) {
@@ -165,6 +165,8 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
                 borderRadius: BorderRadius.circular(
                     widget.curveBackgroundCorners ? cornerRadius : 0),
               ),
+
+              /// Generates a [Row] of [CustomPainter] each representing a single bar
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -182,7 +184,6 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
                                     ? widget.color ?? Colors.white
                                     : widget.colors![index],
                                 progress: _animators[index].value,
-                                width: maxWidth,
                                 roundBars: widget.roundBars,
                                 barStyle: widget.barStyle),
                           ),
@@ -199,7 +200,7 @@ class _AnimatedMusicIndicatorState extends State<AnimatedMusicIndicator>
   }
 }
 
-// Generates a list of controllers all set to a random duration period.
+/// Generates a list of controllers all set to a random duration period.
 
 List<AnimationController> generateControllers(
     {required TickerProvider tickerProvider,
@@ -216,7 +217,8 @@ List<AnimationController> generateControllers(
   return controllers;
 }
 
-// Generates a list of animation objects linked to a TweenSequence, which will control the animation height.
+/// Generates a list of animation objects linked to a [TweenSequence],
+/// which will control the animation height.
 
 List<Animation<double>> generateAnimations(
     {required List<AnimationController> controllers,

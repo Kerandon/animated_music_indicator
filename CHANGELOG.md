@@ -1,3 +1,13 @@
+[## 0.0.6] [14 March 2023]
+* Run Dart formatter
+* Formatted doc comments
+
+[## 0.0.5] [14 March 2023]
+* Run Dart formatter
+* Added code comments
+* Removed width parameter from BarPainter
+* Replaced a readme gif
+
 [## 0.0.4] [14 March 2023]
 * Run Dart formatter
 

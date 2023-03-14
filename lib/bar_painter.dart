@@ -3,17 +3,16 @@ import 'package:animated_music_indicator/animated_music_indicator.dart';
 import 'package:flutter/material.dart';
 
 /// Paints the three different bar styles
+/// Uses [PathMetrics] to animate based on the percent value (from 0 to 1) passed in.
 
 class BarPainter extends CustomPainter {
   final double progress;
   final Color color;
-  final double width;
   final bool roundBars;
   final BarStyle barStyle;
 
   BarPainter({
     required this.progress,
-    required this.width,
     required this.color,
     required this.roundBars,
     required this.barStyle,
@@ -34,14 +33,12 @@ class BarPainter extends CustomPainter {
 
     final path = Path();
 
-    /// SOLID
+    /// Solid
 
     if (barStyle == BarStyle.solid) {
       path
         ..moveTo(width / 2, height)
         ..lineTo(width / 2, 0);
-
-      ///Uses [PathMetrics] to animate based on the percent value (from 0 to 1) passed in.
 
       ui.PathMetrics pathMetrics = path.computeMetrics();
 
@@ -51,14 +48,17 @@ class BarPainter extends CustomPainter {
 
       canvas.drawPath(extracted, paint);
 
-      /// DASH
-
+      /// Dash
     } else if (barStyle == BarStyle.dash) {
+      /// Calculates what percentage of [maxNumberOfSegments] should be painted.
       const maxNumberOfSegments = 8;
       final currentNumberOfSegments = maxNumberOfSegments * progress;
+
       paint.strokeWidth = height / (maxNumberOfSegments * 2);
       for (int i = 0; i < currentNumberOfSegments; i++) {
         const dashHeight = 1 / maxNumberOfSegments;
+
+        /// A path is painted based on [currentNumberOfSegments]
         path
           ..moveTo(width * 0.25,
               height - (height * dashHeight * i) - (height * (dashHeight / 2)))
@@ -71,17 +71,19 @@ class BarPainter extends CustomPainter {
 
       canvas.drawPath(path, paint);
 
-      /// CIRCLE
-
-
+      /// Circle
     } else if (barStyle == BarStyle.circle) {
+      /// Calculates what percentage of [maxNumberOfSegments] should be painted.
       const maxNumberOfSegments = 6;
       final currentNumberOfSegments = maxNumberOfSegments * progress;
+
       paint.strokeWidth = height / (maxNumberOfSegments + 5);
       for (int i = 0; i < currentNumberOfSegments; i++) {
         const dashHeight = 1 / maxNumberOfSegments;
         path.moveTo(width * 0.30,
             height - (height * dashHeight * i) - (height * (dashHeight / 2)));
+
+        /// A circle is painted based on [currentNumberOfSegments]
         canvas.drawCircle(
             Offset(
                 width / 2,

@@ -6,10 +6,9 @@
 
 You can customize by selecting one of three styles: **1. solid**, **2. circle** & **3. dash**.
 
-![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/Three_styles_gif.gif)
+![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/three_styles_gif_example.gif)
 
 ## Animation
-
 
 ![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif)
 

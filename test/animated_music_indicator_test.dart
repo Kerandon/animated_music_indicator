@@ -2,6 +2,9 @@ import 'package:animated_music_indicator/animated_music_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+/// Tests if at least one [AnimatedMusicIndicator] is created
+/// when animation is running.
+
 void main() {
   testWidgets(
     'BarPainter widgets are shown',

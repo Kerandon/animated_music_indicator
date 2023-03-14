@@ -1,7 +1,7 @@
 import 'package:animated_music_indicator/animated_music_indicator.dart';
 import 'package:flutter/material.dart';
 
-// Tapping on a tile will animate that tile's [AnimatedMusicIndicator].
+/// Tapping on a tile will animate that tile's [AnimatedMusicIndicator].
 
 void main() {
   runApp(
@@ -24,6 +24,8 @@ class AnimatedMusicIndicatorExample extends StatefulWidget {
 
 class _AnimatedMusicIndicatorExampleState
     extends State<AnimatedMusicIndicatorExample> {
+  /// Note, for this example purpose, initializing [_index] to 99
+  /// so the animation does not run on init.
   int _index = 99;
 
   void _tileTapped(int index) {
@@ -33,9 +35,8 @@ class _AnimatedMusicIndicatorExampleState
 
   @override
   Widget build(BuildContext context) {
-
-    /// Example creates 5 [ListTile] with [AnimatedMusicIndicator] set as trailing.
-
+    /// Creates 5 [ListTile]s with [AnimatedMusicIndicator]
+    /// set as trailing.
     return Scaffold(
       body: ListView.builder(
           itemCount: 5,
