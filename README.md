@@ -11,7 +11,7 @@ You can customize by selecting one of three styles: **1. solid**, **2. circle** 
 ## Animation
 
 
-![Alt Text](img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif)
+![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/animate_example.gif)
 
 You can control the animation by passing a boolean to **animate**.
 
@@ -51,4 +51,4 @@ AnimatedMusicIndicator();
               
 ```
 
-![Alt Text](img src="https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif)
+![Alt Text](https://github.com/Kerandon/animated_music_indicator/blob/main/images/color_dash_bars_example.gif)
