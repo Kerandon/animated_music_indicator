@@ -1,5 +1,5 @@
 name: animated_music_indicator
-description: A new Flutter package project.
+description: Displays an animated equalizer to indicate music is playing.
 version: 0.0.1
 homepage:
 
